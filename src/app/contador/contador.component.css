@@ -1,0 +1,31 @@
+/*Propiedades geenrales de los botones*/
+.contenedor{
+    color: black;
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*Diseño de los botones*/
+button{
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    font-size: 35px;
+    margin: 20px;
+    border: none;
+    box-shadow: 0px 0px 10px 0px #333 inset;
+}
+
+/*Acciones para el cambio de color*/
+.disabled-button{
+    background-color: rgb(231, 41, 41);
+}
+
+.yellow-button{
+    background-color: rgb(255, 204, 0);
+}
+
+.green-button{
+    background-color: rgb(26, 152, 49);
+}

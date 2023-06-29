@@ -1,0 +1,22 @@
+<h3>Taller 2</h3>
+
+<h4>1. Turnero</h4>
+<h4>2. Formulario</h4>
+<h4>3. Meses del Año</h4>
+<h4>4. Botones, Cambio de color de texto</h4>
+
+
+<input type="number" class="form-control mt-2" #nuevoDia>
+<button class="btn btn-primary mt-2 mb-4" (click)="dia = nuevoDia.value" >
+    Envia Opción
+</button>
+
+<div [ngSwitch]="dia" *ngIf="dia" > <!--Si no tiene nada no aparecera el mesje de valor no valido-->
+    
+    <span *ngSwitchCase="1"><app-contador></app-contador></span>
+    <span *ngSwitchCase="2"><app-formulario></app-formulario></span>
+    <span *ngSwitchCase="3"><app-mes-dia></app-mes-dia></span>
+    <span *ngSwitchCase="4"><app-botones></app-botones></span>   
+    <span *ngSwitchDefault class="alert alert-danger">Opción No Existente</span>
+
+</div>

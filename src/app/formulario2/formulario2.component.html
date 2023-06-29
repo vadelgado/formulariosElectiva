@@ -1,0 +1,66 @@
+<div class="card" style="background-color:antiquewhite;">
+    <form (ngSubmit)="procesar()" #formContact="ngForm">
+
+        <div class="card-body">
+            <div class="mb-2">
+                <label for="" class="form-label">Nombre</label>
+                <input type="text"   name="nombre" class="form-control" placeholder="Ingrese su nombre"
+                    [(ngModel)]="persona.nombre" required #name="ngModel">
+
+                <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
+
+                    el nombre es requerido.
+
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="" class="form-label">Edad</label>
+                <input type="number" name="edad" class="form-control" placeholder="Ingrese su edad" min=0
+                    [(ngModel)]="persona.edad" required #age="ngModel">
+                    <div class="alert alert-danger mt-2" [hidden]="age.valid || age.pristine">
+
+                        la edad es requerido.
+
+                    </div>
+            </div>
+            <!--<div class="text-center">
+                <button type="submit" [class]="{disabled: !(name.valid && age.valid)}"
+                class="btn btn-primary mt-4 btn-lg "
+                [hidden]="">Enviar.</button>
+            </div>-->
+
+            <!-- <div class="text-center">
+                <button type="submit" [disabled]="name.invalid || age.invalid"
+                class="btn btn-primary mt-4 btn-lg "
+                [hidden]="">Enviar.</button>
+            </div> -->
+
+            <div class="text-center">
+                <button type="submit" [disabled]="formContact.invalid"
+                class="btn btn-primary mt-4 btn-lg "
+                [hidden]="">Enviar.</button>
+            </div>
+
+        </div>
+
+    </form>
+
+
+</div>
+
+FormContad : {{formContact.valid}} <br>
+
+ErrorsName : {{name.errors | json}} <br>
+ErrorsAge : {{age.errors | json}} <br>
+
+ValidName : {{name.valid}} <br>
+ValidAge : {{age.valid}} <br>
+
+TouchedName : {{name.touched}} <br>
+TouchedAge : {{age.touched}} <br>
+
+PristineName : {{name.pristine}} <br>
+PristineAge : {{age.pristine}} <br>
+
+{{persona | json }}

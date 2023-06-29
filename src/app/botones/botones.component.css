@@ -1,0 +1,27 @@
+
+h1{
+    text-align: center;
+}
+.contenedor{
+    background: rgb(108, 155, 37);
+    width: 100%;
+    padding: 30px 30px;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+}
+.contenedor h1{
+    color: rgb(24, 61, 36);
+}
+.contenedor h2{
+    color: rgb(10, 95, 38);
+}
+
+h2{
+    color: #CCCCCC;
+}
+
+button{
+    position: relative;
+}
+

@@ -1,0 +1,23 @@
+<div class="container form">
+    <input type="text" placeholder="Ingrese su nombre" class="form-control mt-2" #nombre> <!--Se puede acceder al input-->
+<input type="text" placeholder="Ingrese su apellido" class="form-control mt-2" #apellido>
+<input type="number" placeholder="Ingrese su edad Actual" class="form-control mt-2" #edad>
+<label for="">Seleccione su Fecha de Nacimiento:</label>
+<input type="date" class="form-control mt-2" #fecha>
+<input type="text" placeholder="Ingrese su Nùmero de Telefono" class="form-control mt-2" #telefono>
+<input type="email" placeholder="Ingrese su Email" class="form-control mt-2" #mail>
+<button class="btn btn-primary mt-2" (click)="mostrarEnConsola(nombre.value,apellido.value,edad.value,fecha.value,telefono.value,mail.value)">
+    Mostrar en consola
+</button>
+</div>
+
+<div class="alert alert-primary mt-4" *ngIf="abrirAlerta; else mensaje"> <!--directiva si Activas y podemos poner las variables ymanejo de funcionamiento, se ponga un mensaje del ng template-->
+    <p>Favor Revise la consola del Navegador!</p>
+
+</div>
+
+<ng-template #mensaje >
+<div class="alert alert-danger mt-4">
+    Formulario en Blanco
+</div>
+</ng-template>

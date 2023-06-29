@@ -1,0 +1,32 @@
+<div class="container">
+    <h1>Meses del Año</h1>
+<ul>
+    <li *ngFor="let Mes of mes; let i = index " >
+        {{ Mes.id + ' ' + ' ' + Mes.nombre }}
+    </li>
+
+</ul>
+<br>
+<input type="number" class="form-control mt-2" #nuevoMes>
+<button class="btn btn-primary mt-2 mb-4" (click)="meses = nuevoMes.value" >
+    Envia Opción
+</button>
+
+<div [ngSwitch]="meses" *ngIf="meses" > <!--Si no tiene nada no aparecera el mesje de valor no valido-->
+    
+    <span *ngSwitchCase="1">Enero <br><app-mes></app-mes></span>
+    <span *ngSwitchCase="2">Febrerp <br><app-mes></app-mes> </span>
+    <span *ngSwitchCase="3">Marzo <br> <app-mes></app-mes></span>
+    <span *ngSwitchCase="4">Abril <br> <app-mes></app-mes></span>
+    <span *ngSwitchCase="5">Mayo <app-mes></app-mes></span>
+    <span *ngSwitchCase="6">Junio <br><app-mes></app-mes></span>
+    <span *ngSwitchCase="7">Julio <br> <app-mes></app-mes></span>
+    <span *ngSwitchCase="8">Agosto <br> <app-mes></app-mes></span>
+    <span *ngSwitchCase="9">Septiembre <br> <app-mes></app-mes></span>
+    <span *ngSwitchCase="10">Octubre <br> <app-mes></app-mes></span>
+    <span *ngSwitchCase="11">Noviembre <br> <app-mes></app-mes></span>
+    <span *ngSwitchCase="12">Diciembre <br><app-mes></app-mes> </span>
+    <span *ngSwitchDefault class="alert alert-danger">Mes No existe</span>
+
+</div>
+</div>

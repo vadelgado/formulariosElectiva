@@ -1,0 +1,27 @@
+<h3>Dias de la Semana</h3>
+
+<h4>1. Lunes</h4>
+<h4>2. Martes</h4>
+<h4>3. Miercoles</h4>
+<h4>4. Jueves</h4>
+<h4>5. Viernes</h4>
+<h4>6. Sabado</h4>
+<h4>7. Domingo</h4>
+
+
+<input type="number" class="form-control mt-2" #nuevoDia>
+<button class="btn btn-primary mt-2 mb-4" (click)="dia = nuevoDia.value" >
+    Envia Opción
+</button>
+
+<div style="font-size: 20px;" [ngSwitch]="dia" *ngIf="dia" > <!--Si no tiene nada no aparecera el mesje de valor no valido-->
+    
+    <span *ngSwitchCase="1">Lunes</span>
+    <span *ngSwitchCase="2">Martes</span>
+    <span *ngSwitchCase="3">Miercoles</span>
+    <span *ngSwitchCase="4">Jueves</span>
+    <span *ngSwitchCase="5">Viernes</span>
+    <span *ngSwitchCase="6">Sabado</span>
+    <span *ngSwitchCase="7">Domingo</span>
+    <span *ngSwitchDefault class="alert alert-danger">Dia No Existente</span>
+</div>

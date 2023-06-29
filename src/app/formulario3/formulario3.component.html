@@ -1,0 +1,74 @@
+<div class="card">
+  <form [formGroup]="formUser" (ngSubmit)="procesar()">
+    <div class="card-body">
+      <div class="mb-2">
+
+        <!-- <label class="form-label"> Nombre: </label>
+        <input type="text" [formControl]="nombre" class="form-control" placeholder="Ingrese nombre" />
+        <div class="alert alert-danger mt-1" [hidden]="nombre.valid || nombre.pristine">
+          El nombre es Obligatorio!
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <label class="form-label"> Email: </label>
+        <input type="text" [formControl]="email" class="form-control" placeholder="Ingrese Email" />
+        <div class="alert alert-danger mt-1" [hidden]="email.valid || email.pristine">
+          <span *ngIf="email.errors?.['required']">
+            El correo es Obligatorio!
+          </span>
+          <span *ngIf="email.errors?.['email']">
+            El email  NO ser valido"
+          </span> -->
+
+          <label class="form-label"> Nombre: </label>
+        <input type="text" formControlName="nombre" class="form-control" placeholder="Ingrese nombre" />
+         <div class="alert alert-danger mt-1" [hidden]="nombre.valid || nombre.pristine">
+          El nombre es Obligatorio!
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <label class="form-label"> Email: </label>
+        <input type="text" formControlName="email" class="form-control" placeholder="Ingrese Email" />
+         <div class="alert alert-danger mt-1" [hidden]="email.valid || email.pristine">
+          <span *ngIf="email.errors?.['required']">
+            El correo es Obligatorio!
+          </span>
+          <span *ngIf="email.errors?.['email']">
+            El email  NO ser valido"
+          </span>
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- <button class="btn btn-primary"[disabled]="nombre.invalid || email.invalid">
+      Enviar
+    </button> -->
+
+     <button class="btn btn-primary"[disabled]="formUser.invalid">
+      Enviar
+    </button>
+
+  </form>
+
+</div>
+<!-- nombre:{{
+  nombre.value
+}}
+<br>
+email:{{
+  email.value
+}}
+<br>
+email.errors : {{email.errors | json }} -->
+
+formUser: {{formUser.value | json}} <br>
+formGet Nombre: {{formUser.get('nombre')?.value }} <br>
+formGet Email: {{formUser.get('email')?.value }} <br>
+
+

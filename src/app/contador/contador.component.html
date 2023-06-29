@@ -1,0 +1,14 @@
+<div class="contenedor">
+    <button [disabled]="numero == 0" [ngClass]="{'disabled-button': numero == 0,
+                                                 'yellow-button': numero == 1 || numero == 2,
+                                                 'green-button': numero == 3 || numero == 4 ||numero == 5}"
+    
+     (click)=decrementar()>-</button>
+
+    <span>{{'\t'+numero+'\t'}}</span>
+    
+    <button [disabled]="numero == 10" [ngClass]="{'disabled-button': numero == 10,
+                                                  'yellow-button': numero == 8 || numero == 9,
+                                                  'green-button': numero == 6 || numero == 7}"
+     (click)=incrementar()>+</button>
+</div>

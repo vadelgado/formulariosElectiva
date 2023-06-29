@@ -1,0 +1,35 @@
+<div class="contenedor">
+
+    <h1>Cambio de color</h1>
+
+    <button  [class]= "{'disabled':botonDesactivar,
+    'btn': true,
+    'btn-danger': true}" class="btn btn-danger disabled" (click)="colorTexto = 'text-danger'">Color Rojo</button>
+    
+    <button [class]= "{'disabled':botonDesactivar,
+    'btn': true,
+    'btn-success': true}" class="btn btn-success disabled"
+     class="btn btn-success mx-3" (click)="colorTexto = 'text-success'">Color Verde</button>
+
+    
+    <button 
+    [class]= "{'disabled':botonDesactivar,
+    'btn': true,
+    'btn-primary': true}" class="btn btn-danger disabled"
+    class="btn btn-primary" (click)="colorTexto = 'text-primary'">Color Azul</button> <br> <br>
+
+
+
+    <button
+     class="btn btn-secondary" (click)="botonDesactivar = !botonDesactivar"> <!--Lo niega la funcion-->
+        Activar/Desactivar
+    </button>
+
+
+</div>
+
+
+<p [class]="colorTexto">
+    Texto donde cambiara de color
+</p>
+
