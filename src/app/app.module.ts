@@ -16,6 +16,8 @@ import { Formulario2Component } from './formulario2/formulario2.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Formulario3Component } from './formulario3/formulario3.component';
 import { NiniosComponent } from './ninios/ninios.component';
+import { AddMessageComponent } from './add-message/add-message.component';
+import { ListMessageComponent } from './list-message/list-message.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { NiniosComponent } from './ninios/ninios.component';
     Formulario2Component,
     Formulario3Component,
     NiniosComponent,
+    AddMessageComponent,
+    ListMessageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
